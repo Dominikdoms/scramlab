@@ -1,0 +1,115 @@
+@import "../scss/settings/colors";
+@import "../scss/settings/fonts";
+
+.header-view{
+  min-width: 1440px;
+  height: 100px;
+  background: #4a4a49;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .header-view__container {
+    width: 98%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-view__pagetitle{
+    display: flex;
+    justify-content: space-between;
+  }
+  .header-view__pagetitle__part1{
+    font-size: 30px;
+    color: #FF6600;
+    font-family: 'Charmonman', cursive;
+
+  }
+  .header-view__pagetitle__part2{
+    font-size: 40px;
+    font-weight: 400;
+    color: #FFFFFA;
+    font-family: 'Charmonman', cursive;
+  }
+}
+
+.header-view__user{
+  width: 115px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .header-view_user-name{
+    color: white;
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+  }
+
+  .header-view_icon{
+    color: $btn;
+    font-size: 42px;
+  }
+}
+//------------------------
+//---------ASIDE----------
+//------------------------
+aside{
+  background-image: url("../image/background.png");
+}
+
+
+.aside-menu{
+  height: calc(100vh - 120px);
+  width: 14vw;
+  background: $navigation;
+
+  ul{
+    display: flex;
+    flex-direction: column;
+
+    .aside-link{
+      padding-left: 33px;
+      padding-top: 16px;
+    }
+    a{
+      text-decoration: none;
+      color: white;
+      font-size: 25px;
+      font-family: $fontOpenSans;
+      &::after{
+        content: "";
+        display: block;
+        width: 6px;
+        height: 60px;
+        position: relative;
+        top: -40px;
+        left: -30px;
+      }
+      .faChevronRight{
+        padding-left: 100px;
+        color: transparent;
+      }
+      .faChevronRight-center{
+        padding-left: 104px;
+        color: transparent;
+      }
+      &:hover{
+        color: $btn;
+        &::after{
+          background-color: $btn;
+        }
+        .faChevronRight{
+          color: $btn;
+          margin-left: 40px;
+        }
+        .faChevronRight-center{
+          color: $btn;
+        }
+      }
+    }
+  }
+}
+
+

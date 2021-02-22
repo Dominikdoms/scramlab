@@ -6,18 +6,20 @@ import About from "./inApp/About";
 import {CallToAction} from "./components/callToAction";
 import {FormToSave} from "./components/formToSave";
 import MainFooter from "./components/footer";
+import {MainView} from "./components/main-view";
 
 
-const App=()=> {
+const App = () => {
     return (
         <>
-      <Header/>
-      <Author/>
-      <About/>
-                <MainCarousel/>
+            <Header/>
+            <Author/>
+            <About/>
+            <MainCarousel/>
             <CallToAction/>
             <FormToSave/>
-          <MainFooter/>
+            <MainFooter/>
+            <MainView/>
 
         </>
     )
