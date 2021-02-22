@@ -1,11 +1,10 @@
-import './scss/main.scss'
+import MainCarousel from "./Components/carousel";
 
-
-function App() {
+const App=()=> {
   return (
-    <div className="App">
-    </div>
-  );
+      <MainCarousel/>
+
+  )
 }
 
 export default App;
