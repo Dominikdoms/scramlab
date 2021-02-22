@@ -5,6 +5,7 @@ import Author from "./inApp/Author";
 import About from "./inApp/About";
 import {CallToAction} from "./components/callToAction";
 import {FormToSave} from "./components/formToSave";
+import MainFooter from "./Components/footer";
 
 
 const App=()=> {
@@ -16,6 +17,8 @@ const App=()=> {
                 <MainCarousel/>
             <CallToAction/>
             <FormToSave/>
+          <MainFooter/>
+
         </>
     )
 }
