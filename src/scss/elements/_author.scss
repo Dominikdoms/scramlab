@@ -1,0 +1,36 @@
+.author{
+  display: flex;
+  justify-content: center;
+}
+
+.author__container{
+  height: 700px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+}
+
+.author__photo{
+  width: 350px;
+  height: 350px;
+  background: #5B605F;
+}
+
+.author__box{
+  height: 350px;
+  width: 600px;
+}
+
+.author__name{
+  font-size: 40px;
+  font-weight: 500;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 20px;
+}
+
+.author__text{
+  font-size: 25px;
+  font-weight: 500;
+  font-family: 'Open Sans', sans-serif;
+}

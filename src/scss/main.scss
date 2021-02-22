@@ -4,7 +4,9 @@
 @import "settings/mixins";
 
 //elements:
-
+@import "elements/header";
+@import "elements/author";
+@import "elements/about";
 
 //generic:
 @import "generic/reset";

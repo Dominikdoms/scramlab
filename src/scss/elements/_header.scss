@@ -1,0 +1,51 @@
+.header{
+  min-width: 1440px;
+  height: 120px;
+  background: #4a4a49;
+  display: flex;
+  justify-content: center;
+}
+
+.header__container {
+  width: 1200px;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__pagetitle{
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__menu{
+  display: flex;
+  justify-content: space-between;
+  width: 750px;
+}
+
+.header__pagetitle__part1{
+  font-size: 40px;
+  color: #FF6600;
+  font-family: 'Charmonman', cursive;
+
+}
+.header__pagetitle__part2{
+  font-size: 40px;
+  font-weight: 400;
+  color: #FFFFFA;
+  font-family: 'Charmonman', cursive;
+}
+
+.header__menu__element{
+  font-size: 20px;
+  color: #FFFFFA;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header__menu__element:hover{
+  font-size: 20px;
+  color: #FF6600;
+  font-family: 'Open Sans', sans-serif;
+}
