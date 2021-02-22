@@ -1,0 +1,45 @@
+@import "../scss/settings/colors";
+@import "../scss/settings/fonts";
+@import "../scss/settings/colors";
+
+.toAction {
+  width: 100vw;
+  height: 200px;
+  background-color: $header;
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .toAction_container{
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.toAction_header{
+  font-size: 36px;
+  font-family: $fontOpenSans;
+  color: white;
+  padding-bottom: 30px;
+}
+
+.toAction_text{
+  font-family: $fontOpenSans;
+  color: white;
+  font-size: 20px;
+}
+
+.toAction_btn{
+  width: 250px;
+  height: 60px;
+  margin-left: 250px;
+  background-color: $btn;
+  border: none;
+  color: white;
+}
