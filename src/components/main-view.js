@@ -9,7 +9,7 @@ import {
     Switch,
     NavLink,
 } from 'react-router-dom';
-import { DesktopWidget } from './desktop-widget'
+import { DesktopWidgets } from './desktop-widgets'
 
 export const MainView = () => {
 
@@ -75,7 +75,7 @@ export const MainView = () => {
               {/*-------------------
               ------COMPONENTS------
               ----------------------*/}
-              <DesktopWidget/>
+              <DesktopWidgets/>
 
           {/*-------------------
           --------------------*/}
