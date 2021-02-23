@@ -56,12 +56,12 @@
 //---------ASIDE----------
 //------------------------
 aside{
-  background-image: url("../image/background.png");
+  //background-image: url("../image/background.png");
 }
 
 
 .aside-menu{
-  height: calc(100vh - 120px);
+  height: calc(100vh - 117px);
   width: 14vw;
   background: $navigation;
 
@@ -112,4 +112,8 @@ aside{
   }
 }
 
+.aside-container{
+  background-image: url("../image/background.png");
+  display: flex;
+}
 

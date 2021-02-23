@@ -9,7 +9,7 @@ import {
     Switch,
     NavLink,
 } from 'react-router-dom';
-
+import { DesktopWidget } from './desktop-widget'
 
 export const MainView = () => {
 
@@ -36,6 +36,8 @@ export const MainView = () => {
                     </div>
                 </div>
             </header>
+
+          <div className={"aside-container"}>
             <aside>
                 <HashRouter>
                     <nav className={"aside-menu"}>
@@ -70,6 +72,14 @@ export const MainView = () => {
                     </Switch>
                 </HashRouter>
             </aside>
+              {/*-------------------
+              ------COMPONENTS------
+              ----------------------*/}
+              <DesktopWidget/>
+
+          {/*-------------------
+          --------------------*/}
+          </div>
         </>
 
     )
