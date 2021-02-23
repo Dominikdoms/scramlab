@@ -14,7 +14,6 @@ export const DesktopWidgets = () => {
 
     const [recipe, setRecipe] = useState('')
     const [plan, setPlan] = useState('')
-    const [shopping, setShopping] = useState('')
 
 
     const handleSubmitRecipe = (e) => {
@@ -65,29 +64,6 @@ export const DesktopWidgets = () => {
         setPlan('');
     }
 
-    const handleSubmitShopping = (e) => {
-        e.preventDefault()
-
-        const newFood = {
-            shopping
-        }
-
-        fetch('http://localhost:3000/food', {
-            method: "POST",
-            body: JSON.stringify(newFood),
-            headers: {
-                "Content-Type": "application/json"
-            }
-        })
-            .then(response => response.json())
-            .then((data) => {
-                // if (typeof ... === "function") {
-                //     ...(data)
-                //     }
-                console.log(data)
-            })
-        setShopping('');
-    }
 
     return (
         <section className={"widgets-container"}>
@@ -123,21 +99,6 @@ export const DesktopWidgets = () => {
                 </form>
             </Popup>
 
-            <Popup className={"popup-content"}
-                   trigger={
-                       <div className={"widgets"}>
-                           <Plus className={"icon"}/>
-                           <p className={"wigdet-text"}>zakupy</p>
-                       </div>
-                   } position="center">
-                <form onSubmit={e => handleSubmitShopping(e)}>
-                    <textarea
-                        className={"popup-content_textarea"}
-                        value={shopping}
-                        onChange={e => setShopping(e.target.value)}/>
-                    <button>zatwierdź</button>
-                </form>
-            </Popup>
         </section>
     )
 }
