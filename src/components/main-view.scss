@@ -55,9 +55,9 @@
 //------------------------
 //---------ASIDE----------
 //------------------------
-aside{
-  //background-image: url("../image/background.png");
-}
+//aside{
+//  //background-image: url("../image/background.png");
+//}
 
 
 .aside-menu{
@@ -66,12 +66,12 @@ aside{
   background: $navigation;
 
   ul{
-    display: flex;
-    flex-direction: column;
+    //display: flex;
+    //flex-direction: column;
 
     .aside-link{
       padding-left: 33px;
-      padding-top: 16px;
+      //padding-top: 16px;
     }
     a{
       text-decoration: none;
@@ -88,11 +88,11 @@ aside{
         left: -30px;
       }
       .faChevronRight{
-        padding-left: 100px;
+        padding-left: 70px;
         color: transparent;
       }
       .faChevronRight-center{
-        padding-left: 104px;
+        padding-left: 38px;
         color: transparent;
       }
       &:hover{
@@ -102,13 +102,13 @@ aside{
         }
         .faChevronRight{
           color: $btn;
-          margin-left: 40px;
         }
         .faChevronRight-center{
           color: $btn;
         }
       }
     }
+    padding-top: 40px;
   }
 }
 
