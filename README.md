@@ -1,3 +1,13 @@
+#JSON SERVER: 
+http://localhost:3000/food
+
+1. turn on - type in terminal:
+```json-server db.json --watch```
+
+2. Open second terminal and type in: ```npm start```
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
