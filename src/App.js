@@ -6,10 +6,9 @@ import About from "./inApp/About";
 import {CallToAction} from "./components/callToAction";
 import {FormToSave} from "./components/formToSave";
 import MainFooter from "./components/footer";
-import Route from "./Route";
 import {BrowserRouter} from "react-router-dom";
 import {MainView} from "./components/main-view";
-
+import {AddRecipe} from './components/add-recipe'
 
 const App = () => {
     return (
@@ -22,6 +21,7 @@ const App = () => {
             <FormToSave/>
             <MainFooter/>
             <MainView/>
+            <AddRecipe/>
         </BrowserRouter>
     )
 }
