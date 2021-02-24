@@ -10,7 +10,7 @@ import {
     NavLink,
 } from 'react-router-dom';
 import { DesktopWidgets } from './desktop-widgets'
-import {NewRecipe} from './add-new-recipe/new-recipe'
+// import {NewRecipe} from './add-new-recipe/new-recipe'
 
 export const MainView = () => {
 
