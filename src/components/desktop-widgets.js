@@ -7,7 +7,7 @@ import {ReactComponent as Plus} from '../icons/plus-square-regular.svg'
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 
-// import {Recipe} from "./desktop-widget/recipe";
+// import {NewRecipe} from './add-new-recipe/new-recipe'
 
 
 export const DesktopWidgets = () => {
