@@ -10,6 +10,7 @@ import {
     NavLink,
 } from 'react-router-dom';
 import { DesktopWidgets } from './desktop-widgets'
+import {NewRecipe} from './add-new-recipe/new-recipe'
 
 export const MainView = () => {
 
@@ -61,7 +62,8 @@ export const MainView = () => {
                     </nav>
                     <Switch>
                         <Route exact path={"/app/desktop"}>
-                            {/*<Desktop />*/}
+                            {/*<NewRecipe />*/}
+                            <DesktopWidgets/>
                         </Route>
                         <Route exact path={"/app/recipes"}>
                             {/*<Recipes />*/}
@@ -75,7 +77,7 @@ export const MainView = () => {
               {/*-------------------
               ------COMPONENTS------
               ----------------------*/}
-              <DesktopWidgets/>
+              {/*<DesktopWidgets/>*/}
 
           {/*-------------------
           --------------------*/}
