@@ -55,10 +55,9 @@
 //------------------------
 //---------ASIDE----------
 //------------------------
-//aside{
-//  //background-image: url("../image/background.png");
-//}
-
+aside{
+  display: flex;
+}
 
 .aside-menu{
   height: calc(100vh - 117px);
@@ -66,12 +65,8 @@
   background: $navigation;
 
   ul{
-    //display: flex;
-    //flex-direction: column;
-
     .aside-link{
       padding-left: 33px;
-      //padding-top: 16px;
     }
     a{
       text-decoration: none;
