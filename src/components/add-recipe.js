@@ -1,5 +1,8 @@
 import React from "react";
 import {useState} from "react";
+import './add-recipe.scss';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faPlusSquare} from "@fortawesome/free-solid-svg-icons";
 
 export const AddRecipe = () => {
     const [nameRecipe, setNameRecipe] = useState('');
@@ -61,52 +64,60 @@ export const AddRecipe = () => {
     }
 
     return (
-        <div style={{height: 600, width: 960, backgroundColor: "lightblue"}}>
+        <div className='form_container'>
             <form onSubmit={handleSubmit}>
-                <div>
-                    <h2>Nowy Przepis</h2>
-                    <button>Zapisz i zamknij</button>
+                <div className='form_header-container'>
+                    <h2 className='new_recipe-title'>Nowy Przepis</h2>
+                    <button className='form_save'>Zapisz i zamknij</button>
                 </div>
                 <div>
-                    <div style={{display: "flex", flexDirection: "column", marginBottom: 30}}>
-                        <label>
-                            Nazwa Przepisu:
-                            <input type="text"
-                                   value={nameRecipe}
-                                   onChange={e => setNameRecipe(e.target.value)}/>
-                            <p style={{color: "red"}}>{error}</p>
-                        </label>
-                        <label>
-                            Opis przepisu:
-                            <textarea
-                                value={description}
-                                onChange={e => setDescription(e.target.value)}
-                                cols="60" rows="5"/>
-                            <p style={{color: "red"}}>{error}</p>
-                        </label>
+                    <div className='recipe_details'>
+                        <div className='recipe_name'>
+                            <label>
+                                Nazwa Przepisu:
+                                <input type="text"
+                                       value={nameRecipe}
+                                       onChange={e => setNameRecipe(e.target.value)}/>
+                                <p style={{color: "red"}}>{error}</p>
+                            </label>
+                        </div>
+                        <div className='recipe_description'>
+                            <label>
+                                Opis przepisu:
+                                <textarea
+                                    value={description}
+                                    onChange={e => setDescription(e.target.value)}
+                                    cols="60" rows="5"/>
+                                <p style={{color: "red"}}>{error}</p>
+                            </label>
+                        </div>
                     </div>
-                    <div>
+                    <div className='display_container'>
                         <label>
-                            INSTRUKCJE:
+                            <h2 className='display_instruction'>INSTRUKCJE:</h2>
                             <input type="text"
                                    value={instruction}
                                    onChange={e => setInstruction(e.target.value)}/>
-                            <span onClick={instructionShow}>❎</span>
+                            <span className='plus_icon' onClick={instructionShow}>
+                                <FontAwesomeIcon icon={faPlusSquare}/>
+                            </span>
                         </label>
 
                         <label>
-                            SKŁADNIKI:
+                            <h2 className='display_ingredients'>SKŁADNIKI:</h2>
                             <input type="text"
                                    value={ingredients}
                                    onChange={e => setIngredients(e.target.value)}
                             />
-                            <span onClick={ingredientsShow}>❎</span>
+                            <span className='plus_icon' onClick={ingredientsShow}>
+                            <FontAwesomeIcon icon={faPlusSquare}/>
+                            </span>
                         </label>
                     </div>
                 </div>
             </form>
-            <div style={{display: "flex"}}>
-                <section>
+            <div className='recipe_display'>
+                <section className='recipe_display-instruction'>
                     <ul>
                         {showInstruction.map((instruction, index) => (
                             <li key={index}>{index + 1}. {instruction}</li>
@@ -114,10 +125,10 @@ export const AddRecipe = () => {
                     </ul>
                     <p style={{color: "red"}}>{error}</p>
                 </section>
-                <section style={{paddingLeft: 30}}>
+                <section className='recipe_display-ingredients'>
                     <ul>
                         {showIngredients.map((ingredients, index) => (
-                            <li key={index}>{index + 1}. {ingredients}</li>
+                            <li className='dotted' key={index}>*{ingredients}</li>
                         ))}
                     </ul>
                     <p style={{color: "red"}}>{error}</p>
