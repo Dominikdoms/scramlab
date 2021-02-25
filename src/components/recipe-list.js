@@ -34,11 +34,22 @@ export const RecipeList = () => {
                 </div>
                 <p className={"recipe-list_action"}>AKCJE</p>
             </div>
-            <div className={"recipe-list_items"}>
+
+            <div>
                 <ul>
                     {recipes.map(recipe => (
                         <section key={recipe.id}>
-                            <li>{recipe.id} {recipe.nameRecipe} {recipe.description}</li>
+                            <li  className={"recipe-list_items"} >
+                                <span className={"recipe-list_id"}>
+                                {recipe.id}
+                            </span>
+                                <span className={"recipe-list_name"}>
+                                    {recipe.nameRecipe}
+                                </span>
+                                <span className={"recipe-list_description"}>
+                                    {recipe.description}
+                                </span>
+                            </li>
                         </section>
                     ))}
 
