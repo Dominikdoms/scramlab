@@ -2,7 +2,7 @@
 @import "../scss/settings/fonts";
 
 .recipe-list_container {
-  width: 79vw;
+  width: 70vw;
   height: 70vh;
   background-color: $background;
   margin: 3%;
@@ -13,7 +13,7 @@
     display: flex;
     justify-content: space-between;
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 51px;
   }
 }
 
@@ -26,38 +26,52 @@
   justify-content: space-between;
 
   .recipe-list_names {
-    width: 300px;
+    width: 23%;
     display: flex;
     justify-content: space-between;
   }
 
   .recipe-list_action {
-    padding-right: 20px;
+    padding-right: 40px;
   }
 }
 
 //--------------------
+.recipe-list_all{
+  height: 617px;
+  width: 100%;
+  overflow:auto;
+  font-family: $fontOpenSans;
+  line-height: 25px;
+  color: $rowsTables;
+}
+
 
 .recipe-list_items {
   display: flex;
   .recipe-list_id {
     display: block;
-    width: 100px;
+    width: 6%;
     padding: 10px;
   }
 
   .recipe-list_name {
     display: block;
     padding: 10px;
-  }
-
-  .recipe-list_id{
-
+    width: 10%;
   }
 
   .recipe-list_description {
     display: block;
     padding: 10px;
-    width: 300px;
+    width: 68%;
+  }
+  .recipe-list_action-items{
+    .iconEdit{
+      color: $newsError;
+    }
+    .iconTrash{
+      color: $trashColor;
+    }
   }
 }
