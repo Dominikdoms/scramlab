@@ -2,7 +2,7 @@ import React from "react";
 import {useState, useEffect} from "react";
 import './recipe-list.scss'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faEdit, faTrashAlt} from "@fortawesome/free-solid-svg-icons";
+import {faEdit, faTrashAlt, faPlusSquare} from "@fortawesome/free-solid-svg-icons";
 
 export const RecipeList = () => {
     const API = "http://localhost:3000/recipes"
@@ -49,7 +49,7 @@ export const RecipeList = () => {
                 recipe.description = editingDescription
                 recipe.nameRecipe = editingName
 
-                fetch(`${API}/${id}`,{
+                fetch(`${API}/${id}`, {
                     method: "PATCH",
                     body: JSON.stringify(newRecipe),
                     headers: {
@@ -63,9 +63,6 @@ export const RecipeList = () => {
             }
             return recipe
         })
-        // console.log(updatedRecipe)
-        //edytowanie aktualnego stanu pobranego z API
-        // setRecipes(updatedRecipe)
         setRecipeEditing(null)
         setEditingDescription('')
         setEditingName('')
@@ -75,12 +72,13 @@ export const RecipeList = () => {
         <div className={"recipe-list_container"}>
             <header className={"recipe-list_header"}>
                 <h2>LISTA PRZEPISÓW</h2>
-                <span>❎</span>
+                <span><FontAwesomeIcon className={"faPlusSquare"}
+                                       icon={faPlusSquare}/></span>
             </header>
             <div className={"recipe-list_feature"}>
                 <div className={"recipe-list_names"}>
                     <p>ID</p>
-                    <p>NAZWA</p>
+                    <p className={"p-name"}>NAZWA</p>
                     <p>OPIS</p>
                 </div>
                 <p className={"recipe-list_action"}>AKCJE</p>
@@ -88,7 +86,6 @@ export const RecipeList = () => {
             <div>
                 <ul className={"recipe-list_all"}>
                     {recipes.map(recipe => (
-
                         <section key={recipe.id}>
                             <li className={"recipe-list_items"}>
                                 <span className={"recipe-list_id"}>
@@ -96,9 +93,11 @@ export const RecipeList = () => {
                             </span>
                                 <span className={"recipe-list_name"}>
                                     {recipeEditing === recipe.id ? (
-                                        <input type="text"
-                                               value={editingName}
-                                               onChange={(e) => setEditingName(e.target.value)}
+                                        <input
+                                            type="text"
+                                            placeholder={"Nazwa"}
+                                            value={editingName}
+                                            onChange={(e) => setEditingName(e.target.value)}
                                         />
                                     ) : (
                                         <p>{recipe.nameRecipe}</p>
@@ -106,14 +105,14 @@ export const RecipeList = () => {
                                 </span>
                                 <span className={"recipe-list_description"}>
                                     {recipeEditing === recipe.id ? (
-                                        <textarea
+                                        <textarea placeholder={"Opis"}
+                                                  className={"textarea"}
                                                   onChange={(e) => setEditingDescription(e.target.value)}
                                                   value={editingDescription}
                                         />
                                     ) : <p>{recipe.description}</p>}
                                 </span>
                                 <span className={"recipe-list_action-items"}>
-
                                     <span>{/*EDIT*/}
                                         {recipeEditing === recipe.id ?
                                             (<button style={{border: "none", backgroundColor: "unset"}}
@@ -126,8 +125,6 @@ export const RecipeList = () => {
                                                     className={"iconEdit"}
                                                     icon={faEdit}/>
                                             </button>)}
-
-
                                     </span>
                                     {/*TRASH*/}
                                     <span onClick={() => deleteRecipe(recipe.id)}>
