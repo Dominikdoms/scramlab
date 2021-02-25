@@ -18,7 +18,7 @@ export const RecipeList = () => {
 
     console.log(editingName);
 
-    const xxxRecipe = {
+    const newRecipe = {
         nameRecipe: editingName,
         description: editingDescription
     }
@@ -51,7 +51,7 @@ export const RecipeList = () => {
 
                 fetch(`${API}/${id}`,{
                     method: "PATCH",
-                    body: JSON.stringify(xxxRecipe),
+                    body: JSON.stringify(newRecipe),
                     headers: {
                         "Content-Type": "application/json"
                     }
