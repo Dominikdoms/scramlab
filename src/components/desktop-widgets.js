@@ -18,7 +18,7 @@ export const DesktopWidgets = () => {
                            <Plus className={"icon"}/>
                            <p className={"wigdet-text"}>przepis</p>
                        </div>
-                   } position="center">
+                   } position="">
 
                 <AddRecipe/>
 

@@ -7,7 +7,7 @@ import {CallToAction} from "./components/callToAction";
 import {FormToSave} from "./components/formToSave";
 import MainFooter from "./components/footer";
 import {BrowserRouter} from "react-router-dom";
-import {MainView} from "./components/main-view";
+// import {MainView} from "./components/main-view";
 import {AddRecipe} from './components/add-recipe'
 
 const App = () => {
@@ -20,7 +20,6 @@ const App = () => {
             <FormToSave/>
             <Author/>
             <MainFooter/>
-            <MainView/>
             <AddRecipe/>
         </BrowserRouter>
     )
