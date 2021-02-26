@@ -8,7 +8,7 @@ import {FormToSave} from "./components/formToSave";
 import MainFooter from "./components/footer";
 import {BrowserRouter} from "react-router-dom";
 // import {MainView} from "./components/main-view";
-import {AddRecipe} from './components/add-recipe'
+// import {AddRecipe} from './components/add-recipe'
 
 const App = () => {
     return (
@@ -20,7 +20,6 @@ const App = () => {
             <FormToSave/>
             <Author/>
             <MainFooter/>
-            <AddRecipe/>
         </BrowserRouter>
     )
 }

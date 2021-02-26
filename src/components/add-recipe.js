@@ -14,7 +14,11 @@ export const AddRecipe = () => {
     const [showInstruction, setShowInstruction] = useState([]);
     const [showIngredients, setShowIngredients] = useState([]);
 
-    const [error, setError] = useState('')
+
+    const [nameError, setNameError] = useState('')
+    const [descriptionError, setDescriptionError] = useState('')
+    const [instructionError, setInstructionError] = useState('')
+    const [ingredientsError, setIngredientsError] = useState('')
 
     //odświerzanie listy Instrukcji
     const instructionShow = () => {
@@ -29,15 +33,35 @@ export const AddRecipe = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        const newError = [];
-        if (nameRecipe < 1) newError.push(1)
-        if (description < 1) newError.push(1)
-        if (showInstruction < 1) newError.push(1)
-        if (showIngredients < 1) newError.push(1)
-        if (newError.length !== 0) {
-            setError("Musi być przynajmniej jeden znak")
-        } else {
-            setError('')
+
+        let nameError = '';
+        let descriptionError = '';
+        let instructionError = '';
+        let ingredientsError = '';
+
+        const errorMessage = "Musi być przynajmniej jeden znak";
+
+        if (nameRecipe.length < 2) {
+            nameError = errorMessage
+            setNameError(nameError);
+        }
+        if (description.length < 2) {
+            descriptionError = errorMessage
+            setDescriptionError(descriptionError)
+        }
+        if (showInstruction.length < 1) {
+            instructionError = errorMessage
+            setInstructionError(instructionError)
+        }
+        if (showIngredients.length < 1) {
+            ingredientsError = errorMessage
+            setIngredientsError(ingredientsError)
+        }
+        if (nameRecipe.length >= 1 && description.length >= 1 && (showInstruction.length >= 1) && (showIngredients.length >= 1)) {
+            setNameError('')
+            setDescriptionError('')
+            setInstructionError('')
+            setIngredientsError('')
 
             const newRecipe = {
                 nameRecipe,
@@ -55,7 +79,6 @@ export const AddRecipe = () => {
             })
                 .then(response => response.json())
                 .then((data) => {
-                    console.log(data)
                 })
 
             setNameRecipe('')
@@ -80,7 +103,7 @@ export const AddRecipe = () => {
                                 <input type="text"
                                        value={nameRecipe}
                                        onChange={e => setNameRecipe(e.target.value)}/>
-                                <p style={{color: "red"}}>{error}</p>
+                                <p style={{color: "red"}}>{nameError}</p>
                             </label>
                         </div>
                         <div className='recipe_description'>
@@ -90,7 +113,7 @@ export const AddRecipe = () => {
                                     value={description}
                                     onChange={e => setDescription(e.target.value)}
                                     cols="60" rows="5"/>
-                                <p style={{color: "red"}}>{error}</p>
+                                <p style={{color: "red"}}>{descriptionError}</p>
                             </label>
                         </div>
                     </div>
@@ -125,7 +148,7 @@ export const AddRecipe = () => {
                             <li key={index}>{index + 1}. {instruction}</li>
                         ))}
                     </ul>
-                    <p style={{color: "red"}}>{error}</p>
+                    <p style={{color: "red"}}>{instructionError}</p>
                 </section>
                 <section className='recipe_display-ingredients'>
                     <ul>
@@ -133,7 +156,7 @@ export const AddRecipe = () => {
                             <li className='dotted' key={index}>*{ingredients}</li>
                         ))}
                     </ul>
-                    <p style={{color: "red"}}>{error}</p>
+                    <p style={{color: "red"}}>{ingredientsError}</p>
                 </section>
             </div>
         </div>

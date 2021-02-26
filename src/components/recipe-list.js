@@ -4,6 +4,7 @@ import './recipe-list.scss'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEdit, faTrashAlt, faPlusSquare} from "@fortawesome/free-solid-svg-icons";
 
+
 export const RecipeList = () => {
     const API = "http://localhost:3000/recipes"
     //aktualne dane pobrane z API
@@ -72,8 +73,10 @@ export const RecipeList = () => {
         <div className={"recipe-list_container"}>
             <header className={"recipe-list_header"}>
                 <h2>LISTA PRZEPISÓW</h2>
-                <span><FontAwesomeIcon className={"faPlusSquare"}
-                                       icon={faPlusSquare}/></span>
+
+
+                <button className={"recipe-list_header-btn"}><FontAwesomeIcon className={"faPlusSquare"}
+                                       icon={faPlusSquare}/></button>
             </header>
             <div className={"recipe-list_feature"}>
                 <div className={"recipe-list_names"}>

@@ -30,6 +30,11 @@
       top: 35px;
     }
 
+    &-btn{
+      border: none;
+      background-color: unset;
+    }
+
     .faPlusSquare{
       color: $newSuccess;
       font-size: 30px;
