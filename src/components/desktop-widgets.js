@@ -1,69 +1,14 @@
 import React from "react";
-import {useState} from "react";
 import './desktop-widget.scss'
 // import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 // import {faPlusSquare} from '@fortawesome/free-solid-svg-icons'
 import {ReactComponent as Plus} from '../icons/plus-square-regular.svg'
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
-
-// import {NewRecipe} from './add-new-recipe/new-recipe'
+import {AddRecipe} from "./add-recipe";
 
 
 export const DesktopWidgets = () => {
-
-    const [recipe, setRecipe] = useState('')
-    const [plan, setPlan] = useState('')
-
-
-    const handleSubmitRecipe = (e) => {
-        e.preventDefault()
-
-        const newFood = {
-            recipe
-        }
-
-        fetch('http://localhost:3000/food', {
-            method: "POST",
-            body: JSON.stringify(newFood),
-            headers: {
-                "Content-Type": "application/json"
-            }
-        })
-            .then(response => response.json())
-            .then((data) => {
-                // if (typeof ... === "function") {
-                //     ...(data)
-                //     }
-                console.log(data)
-            })
-        setRecipe('');
-    }
-
-    const handleSubmitPlan = (e) => {
-        e.preventDefault()
-
-        const newFood = {
-            plan
-        }
-
-        fetch('http://localhost:3000/food', {
-            method: "POST",
-            body: JSON.stringify(newFood),
-            headers: {
-                "Content-Type": "application/json"
-            }
-        })
-            .then(response => response.json())
-            .then((data) => {
-                // if (typeof ... === "function") {
-                //     ...(data)
-                //     }
-                console.log(data)
-            })
-        setPlan('');
-    }
-
 
     return (
         <section className={"widgets-container"}>
@@ -74,13 +19,9 @@ export const DesktopWidgets = () => {
                            <p className={"wigdet-text"}>przepis</p>
                        </div>
                    } position="center">
-                <form onSubmit={e => handleSubmitRecipe(e)}>
-                    <textarea
-                        className={"popup-content_textarea"}
-                        value={recipe}
-                        onChange={e => setRecipe(e.target.value)}/>
-                    <button>zatwierdź</button>
-                </form>
+
+                <AddRecipe/>
+
             </Popup>
 
             <Popup className={"popup-content"}
@@ -90,22 +31,17 @@ export const DesktopWidgets = () => {
                            <p className={"wigdet-text"}>plan</p>
                        </div>
                    } position="center">
-                <form onSubmit={e => handleSubmitPlan(e)}>
-                    <textarea
-                        className={"popup-content_textarea"}
-                        value={plan}
-                        onChange={e => setPlan(e.target.value)}/>
-                    <button>zatwierdź</button>
-                </form>
-            </Popup>
 
+            {/* TU PODEPNIJ KOMPONENT!!!!*/}
+            {/*DODAWANIE PLANU*/}
+
+            </Popup>
         </section>
     )
 }
 
 
-//
-//
+
 // import React from "react";
 // import {useState} from "react";
 // import './desktop-widget.scss'

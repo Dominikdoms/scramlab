@@ -46,7 +46,7 @@ export const AddRecipe = () => {
                 showIngredients
             }
 
-            fetch("http://localhost:3000/food", {
+            fetch("http://localhost:3000/recipes", {
                 method: "POST",
                 body: JSON.stringify(newRecipe),
                 headers: {
@@ -60,6 +60,8 @@ export const AddRecipe = () => {
 
             setNameRecipe('')
             setDescription('')
+            setShowInstruction([])
+            setShowIngredients([])
         }
     }
 
