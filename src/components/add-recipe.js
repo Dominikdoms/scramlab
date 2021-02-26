@@ -97,7 +97,7 @@ export const AddRecipe = () => {
                     <div className='display_container'>
                         <label>
                             <h2 className='display_instruction'>INSTRUKCJE:</h2>
-                            <input type="text"
+                            <textarea className={"display_instruction-textarea"}
                                    value={instruction}
                                    onChange={e => setInstruction(e.target.value)}/>
                             <span className='plus_icon' onClick={instructionShow}>
