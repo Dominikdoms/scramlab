@@ -7,6 +7,7 @@ import {
     NavLink, BrowserRouter,
 } from 'react-router-dom';
 import Why from "./Why";
+import {MainView} from "../components/main-view";
 
 
 const Header = () => {
@@ -46,9 +47,10 @@ const Header = () => {
 
         </header>
     <Switch>
-        <Route exact path="/"></Route>
+        <Route exact path="/"/>
         <Route exact  path="/eatingPlan">
-            <Why/>
+            {/*<Why/>*/}
+            <MainView/>
         </Route>
     </Switch>
     </>

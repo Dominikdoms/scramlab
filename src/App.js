@@ -14,11 +14,11 @@ const App = () => {
     return (
         <BrowserRouter>
             <Header/>
-            <Author/>
-            <About/>
             <MainCarousel/>
             <CallToAction/>
+            <About/>
             <FormToSave/>
+            <Author/>
             <MainFooter/>
             <MainView/>
             <AddRecipe/>
