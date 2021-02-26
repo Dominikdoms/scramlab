@@ -3,7 +3,10 @@ import {useState, useEffect} from "react";
 import './recipe-list.scss'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEdit, faTrashAlt, faPlusSquare} from "@fortawesome/free-solid-svg-icons";
-
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+// import {ReactComponent as Plus} from "../icons/plus-square-regular.svg";
+import {AddRecipe} from "./add-recipe";
 
 export const RecipeList = () => {
     const API = "http://localhost:3000/recipes"
@@ -73,10 +76,16 @@ export const RecipeList = () => {
         <div className={"recipe-list_container"}>
             <header className={"recipe-list_header"}>
                 <h2>LISTA PRZEPISÓW</h2>
+                <Popup className={"popup-content"}
+                       trigger={
+                           <button className={"recipe-list_header-btn"}>
+                               <FontAwesomeIcon className={"faPlusSquare"}
+                                                icon={faPlusSquare}/></button>
+                       } position="">
 
+                    <AddRecipe/>
 
-                <button className={"recipe-list_header-btn"}><FontAwesomeIcon className={"faPlusSquare"}
-                                       icon={faPlusSquare}/></button>
+                </Popup>
             </header>
             <div className={"recipe-list_feature"}>
                 <div className={"recipe-list_names"}>
