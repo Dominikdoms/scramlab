@@ -6,8 +6,8 @@ import {ReactComponent as Plus} from '../icons/plus-square-regular.svg'
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import {AddRecipe} from "./add-recipe";
-
-
+import AddingPlan from "./addingPlan";
+import NewSchedule from "./newSchedule";
 export const DesktopWidgets = () => {
 
     return (
@@ -34,7 +34,8 @@ export const DesktopWidgets = () => {
 
             {/* TU PODEPNIJ KOMPONENT!!!!*/}
             {/*DODAWANIE PLANU*/}
-
+<AddingPlan/>
+<NewSchedule/>
             </Popup>
         </section>
     )

@@ -26,10 +26,9 @@ const App = () => {
             <AddName/>
             <Author/>
             <MainFooter/>
-            <MainView/>
-            <Widgets/>
-            <AddingPlan/>
-            <NewSchedule/>
+            {/*<Widgets/>*/}
+            {/*<AddingPlan/>*/}
+            {/*<NewSchedule/>*/}
         </BrowserRouter>
 
 

@@ -13,7 +13,7 @@ import {
 import { DesktopWidgets } from './desktop-widgets'
 import {RecipeList} from './recipe-list'
 // import {NewRecipe} from './add-new-recipe/new-recipe'
-
+import CustomizedSnackbars from "./widgets";
 export const MainView = () => {
     const [name, setName] = useState(null);
     console.log(name)
@@ -75,6 +75,7 @@ export const MainView = () => {
                         <Route exact path={"/app/desktop"}>
                             {/*<NewRecipe />*/}
                             <DesktopWidgets/>
+                            <CustomizedSnackbars/>
                         </Route>
                         <Route exact path={"/app/recipes"}>
                             {/*<Recipes />*/}
