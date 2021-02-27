@@ -1,7 +1,116 @@
 {
-  "food": [
+  "user": {
+    "name": "DUPA"
+  },
+  "recipes": [
     {
-      "name" : "Asia"
+      "id": 1,
+      "name": "Zupa pomidorowa",
+      "description": "Pyszna zupa pomidorowa z całych pomidorów.",
+      "steps": [
+        "Wlej wodę do garnka"
+      ],
+      "ingredients": [
+        "Pomidory"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Schabowy",
+      "description": "Pyszna zupa pomidorowa z całych pomidorów.",
+      "steps": [
+        "Wlej wodę do garnka"
+      ],
+      "ingredients": [
+        "Pomidory"
+      ]
+    }
+  ],
+  "schedules": [
+    {
+      "id": 1,
+      "name": "Wegetariański tydzień",
+      "description": "Długi opis tygodnia bez mięsa.",
+      "weekNumber": 1,
+      "monday": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "tuesday": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "wednesday": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "thrusday": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "friday": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "satruday": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sunday": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "recipes": "Moja droga",
+      "description": "Lubie placki",
+      "week": 3,
+      "id": 2
+    },
+    {
+      "recipes": "dupa",
+      "description": "1313",
+      "week": 1,
+      "id": 3
+    },
+    {
+      "recipes": "dupa",
+      "description": "1313",
+      "week": 1,
+      "id": 4
+    },
+    {
+      "recipes": "dupa",
+      "description": "dupa",
+      "week": 2,
+      "id": 5
+    },
+    {
+      "recipes": "dzem",
+      "description": "dzem",
+      "week": 2,
+      "id": 6
     }
   ]
 }

@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import './main-view.scss'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faUserCircle, faChevronRight} from '@fortawesome/free-solid-svg-icons'
+import {GetData} from "../RestApi/names";
 import {
     HashRouter,
     Route,
@@ -12,7 +13,16 @@ import {
 
 
 export const MainView = () => {
-
+    const [name, setName] = useState(null);
+    console.log(name)
+    useEffect(async () => {
+            const newName = await GetData()
+            if (newName) {
+                setName(newName.name)
+            }
+        }
+        , []
+    )
     return (
         <>
             <header className={"header-view"}>
@@ -27,7 +37,7 @@ export const MainView = () => {
                     </h1>
                     <div className={"header-view__user"}>
                         <h2 className={"header-view_user-name"}>
-                            Imię
+                            {name}
                         </h2>
                         <span className={"header-view_icon"}>
                        <FontAwesomeIcon className={"header-view_icon"}
