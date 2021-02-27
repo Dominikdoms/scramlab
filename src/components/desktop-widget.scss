@@ -1,0 +1,67 @@
+@import "../scss/settings/colors";
+@import "../scss/settings/fonts";
+
+
+.widgets-container {
+  display: flex;
+  width: 368px;
+  height: 157px;
+  padding-top: 42px;
+  padding-left: 69px;
+
+  .widgets {
+    width: 100%;
+    margin-right: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $background;
+    border: 1px dashed $newSuccess;
+
+    &:nth-last-child(1) {
+      margin-right: unset;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .icon {
+    width: 60px;
+    height: 60px;
+    color: $newSuccess;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .wigdet-text {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-family: $fontOpenSans;
+    font-weight: 600;
+    color: $newSuccess;
+  }
+}
+
+//------------------
+
+div.popup-content {
+  &[role=tooltip] {
+    width: 1422px;
+    height: 773px;
+    position: absolute;
+    left: 0;
+    top: 500px;
+  }
+
+  position: absolute !important;
+  z-index: 999 !important;
+  pointer-events: auto !important;
+  top: 260px !important;
+  left: 318.7188px !important;
+}

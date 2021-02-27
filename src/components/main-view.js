@@ -10,7 +10,9 @@ import {
     Switch,
     NavLink,
 } from 'react-router-dom';
-
+import { DesktopWidgets } from './desktop-widgets'
+import {RecipeList} from './recipe-list'
+// import {NewRecipe} from './add-new-recipe/new-recipe'
 
 export const MainView = () => {
     const [name, setName] = useState(null);
@@ -46,6 +48,8 @@ export const MainView = () => {
                     </div>
                 </div>
             </header>
+
+          <div className={"aside-container"}>
             <aside>
                 <HashRouter>
                     <nav className={"aside-menu"}>
@@ -69,10 +73,12 @@ export const MainView = () => {
                     </nav>
                     <Switch>
                         <Route exact path={"/app/desktop"}>
-                            {/*<Desktop />*/}
+                            {/*<NewRecipe />*/}
+                            <DesktopWidgets/>
                         </Route>
                         <Route exact path={"/app/recipes"}>
                             {/*<Recipes />*/}
+                            <RecipeList />
                         </Route>
                         <Route exact path={"/app/plans"}>
                             {/*<Plans />*/}
@@ -80,6 +86,14 @@ export const MainView = () => {
                     </Switch>
                 </HashRouter>
             </aside>
+              {/*-------------------
+              ------COMPONENTS------
+              ----------------------*/}
+              {/*<DesktopWidgets/>*/}
+
+          {/*-------------------
+          --------------------*/}
+          </div>
         </>
 
     )

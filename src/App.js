@@ -6,6 +6,10 @@ import About from "./inApp/About";
 import {CallToAction} from "./components/callToAction";
 import {FormToSave} from "./components/formToSave";
 import MainFooter from "./components/footer";
+import {BrowserRouter} from "react-router-dom";
+// import {MainView} from "./components/main-view";
+// import {AddRecipe} from './components/add-recipe'
+
 import {MainView} from "./components/main-view";
 import AddName from "./components/addname";
 import Widgets from "./components/widgets";
@@ -13,20 +17,22 @@ import AddingPlan from "./components/addingPlan";
 import NewSchedule from "./components/newSchedule";
 const App = () => {
     return (
-        <>
+        <BrowserRouter>
             <Header/>
-            <Author/>
-            <About/>
             <MainCarousel/>
             <CallToAction/>
+            <About/>
             <FormToSave/>
             <AddName/>
+            <Author/>
             <MainFooter/>
             <MainView/>
             <Widgets/>
             <AddingPlan/>
             <NewSchedule/>
-        </>
+        </BrowserRouter>
+
+
     )
 }
 export default App;

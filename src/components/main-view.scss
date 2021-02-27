@@ -56,22 +56,17 @@
 //---------ASIDE----------
 //------------------------
 aside{
-  background-image: url("../image/background.png");
+  display: flex;
 }
 
-
 .aside-menu{
-  height: calc(100vh - 120px);
+  height: calc(100vh - 117px);
   width: 14vw;
   background: $navigation;
 
   ul{
-    display: flex;
-    flex-direction: column;
-
     .aside-link{
       padding-left: 33px;
-      padding-top: 16px;
     }
     a{
       text-decoration: none;
@@ -88,11 +83,11 @@ aside{
         left: -30px;
       }
       .faChevronRight{
-        padding-left: 100px;
+        padding-left: 70px;
         color: transparent;
       }
       .faChevronRight-center{
-        padding-left: 104px;
+        padding-left: 38px;
         color: transparent;
       }
       &:hover{
@@ -102,14 +97,18 @@ aside{
         }
         .faChevronRight{
           color: $btn;
-          margin-left: 40px;
         }
         .faChevronRight-center{
           color: $btn;
         }
       }
     }
+    padding-top: 40px;
   }
 }
 
+.aside-container{
+  background-image: url("../image/background.png");
+  display: flex;
+}
 

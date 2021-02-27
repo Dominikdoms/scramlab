@@ -1,0 +1,156 @@
+@import "../scss/settings/colors";
+@import "../scss/settings/fonts";
+
+.recipe-list_container {
+  width: 70vw;
+  height: 70vh;
+  background-color: $background;
+  margin: 3%;
+  padding: 30px;
+  border: 1px dashed $header;
+
+  .recipe-list_header {
+    font-size: 30px;
+    font-family: $fontOpenSans;
+    font-weight: 600;
+    color: $btn;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 51px;
+    position: relative;
+    padding-bottom: 15px;
+    &::before{
+      content: '';
+      display: block;
+      width: 95%;
+      height: 1.5px;
+      background-color: $rowsTables;
+      position: absolute;
+      top: 35px;
+    }
+
+    &-btn{
+      border: none;
+      background-color: unset;
+    }
+
+    .faPlusSquare{
+      color: $newSuccess;
+      font-size: 30px;
+    }
+  }
+}
+
+.recipe-list_feature {
+  font-family: $fontOpenSans;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+
+  position: relative;
+  &::before{
+    content: '';
+    display: block;
+    width: 95%;
+    height: 1px;
+    background-color: $rowsTables;
+    position: absolute;
+    top: 6px;
+  }
+
+  .recipe-list_names {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+
+    .p-name{
+      padding-right: 77px;
+    }
+
+  }
+  .recipe-list_action {
+    padding-right: 40px;
+  }
+
+}
+
+
+//--------------------
+.recipe-list_all{
+  height: 617px;
+  width: 100%;
+  overflow:auto;
+  font-family: $fontOpenSans;
+  line-height: 25px;
+  color: $rowsTables;
+
+  position: relative;
+  .recipe-list_items{
+    &::after{
+      content: '';
+      display: block;
+      width: 96%;
+      height: 1px;
+      background-color: $rowsTables;
+      position: absolute;
+      left: 10px;
+    }
+  }
+}
+
+
+.recipe-list_items {
+  display: flex;
+  .recipe-list_id {
+    display: block;
+    width: 6%;
+    padding: 10px;
+  }
+
+  .recipe-list_name {
+    display: block;
+    padding: 10px;
+    width: 17%;
+  }
+
+  .recipe-list_description {
+    display: block;
+    padding: 10px;
+    width: 64%;
+  }
+  .recipe-list_action-items{
+    .iconEdit{
+      color: $newsError;
+    }
+    .iconTrash{
+      color: $trashColor;
+    }
+  }
+}
+.recipe-list_action-items{
+  padding-top: 12px;
+}
+.textarea{
+  resize: none;
+  width: 97%;
+  height: 70px;
+}
+
+div.popup-content {
+  &[role=tooltip] {
+    width: 1422px;
+    height: 773px;
+    position: absolute;
+    left: 0;
+    top: 500px;
+  }
+
+  position: absolute !important;
+  z-index: 999 !important;
+  pointer-events: auto !important;
+  top: 260px !important;
+  left: 288.7188px !important;
+}
