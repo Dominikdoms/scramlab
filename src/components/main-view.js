@@ -14,6 +14,7 @@ import { DesktopWidgets } from './desktop-widgets'
 import {RecipeList} from './recipe-list'
 // import {NewRecipe} from './add-new-recipe/new-recipe'
 import CustomizedSnackbars from "./widgets";
+import {PlanListDisplay} from "./8.1-plan-list-display";
 export const MainView = () => {
     const [name, setName] = useState(null);
     console.log(name)
@@ -83,6 +84,7 @@ export const MainView = () => {
                         </Route>
                         <Route exact path={"/app/plans"}>
                             {/*<Plans />*/}
+                            <PlanListDisplay/>
                         </Route>
                     </Switch>
                 </HashRouter>

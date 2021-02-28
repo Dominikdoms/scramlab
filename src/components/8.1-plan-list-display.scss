@@ -1,0 +1,104 @@
+@import "src/scss/settings/fonts";
+@import "src/scss/settings/colors";
+
+.plan__list-container {
+  margin: 0 auto;
+  max-width: 1000px;
+  border: 2px dotted $rowsTables;
+  padding: 20px 30px;
+  background-color: white;
+  margin-left: 50px;
+  margin-top: 50px;
+
+  .plan__list-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid $rowsTables;
+    margin-bottom: 10px;
+
+    &-title {
+      text-transform: uppercase;
+      color: $btn;
+      font-family: $fontOpenSans;
+      font-size: 2rem;
+      margin-bottom: 5px;
+    }
+
+    .plan__list-add-btn {
+      font-size: 2rem;
+      border: none;
+      background-color: white;
+      color: $newSuccess;
+    }
+  }
+}
+
+.plan__list-content {
+  padding: 0 10px;
+
+  &-header-list {
+    text-transform: uppercase;
+    color: $rowsTables;
+    font-family: $fontOpenSans;
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: flex;
+    border-bottom: 2px solid $rowsTables;
+    border-top: 2px solid $rowsTables;
+    padding: 15px 0;
+
+    &-id {
+    width: 55px;
+      text-align: center;
+    }
+
+    &-name {
+      width: 130px;
+    }
+
+    &-description {
+      width: 620px;
+    }
+
+    &-week {
+      width: 110px;
+    }
+  }
+}
+
+.plan-list_display {
+  font-family: $fontOpenSans;
+  color: $rowsTables;
+  display: flex;
+  border-bottom: 2px solid $rowsTables;
+  padding: 5px 0;
+}
+
+.plan-list_id {
+  width: 55px;
+  text-align: center;
+}
+
+.plan-list_name {
+  width: 130px;
+}
+
+.plan-list_description {
+  width: 620px;
+}
+
+.plan-list_weekNumber {
+  width: 110px;
+}
+
+// IKONY W LIŚCIE
+
+.edit__icon {
+  font-size: 1.5rem;
+  color: $newsError;
+}
+
+.trash__icon {
+  font-size: 1.5rem;
+  color: $trashColor;
+}

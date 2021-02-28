@@ -15,6 +15,7 @@ import AddName from "./components/addname";
 import Widgets from "./components/widgets";
 import AddingPlan from "./components/addingPlan";
 import NewSchedule from "./components/newSchedule";
+import {PlanListDisplay} from "./components/8.1-plan-list-display";
 const App = () => {
     return (
         <BrowserRouter>
