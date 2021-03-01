@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) =>
     createStyles({
         footer: {
             width: "100%",
-            backgroundColor: "#9C9C9C",
+            backgroundColor: "#4a4a49",
             color: "#FFFFFF",
             fontFamily: "'Open Sans', sans-serif",
             paddingTop: 30,
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) =>
         },
         miniFooter: {
             height: 50,
-            backgroundColor: "#8D8D8D",
+            backgroundColor: "#4a4a49",
             display: "flex",
             justifyContent: "center",
             alignItems: "center"

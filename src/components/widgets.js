@@ -1,11 +1,12 @@
-
-
 import React, {useEffect, useState} from 'react';
 import Button from '@material-ui/core/Button';
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import {GetRecipes} from "../RestApi/recipes";
+import CloseIcon from '@material-ui/icons/Close';
+import IconButton from '@material-ui/core/IconButton';
+import Collapse from '@material-ui/core/Collapse';
 
 function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -17,12 +18,13 @@ const useStyles = makeStyles((theme) => ({
         '& > * + *': {
             marginTop: theme.spacing(2),
         },
+
     },
 }));
 
 export default function CustomizedSnackbars() {
     const classes = useStyles();
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = React.useState(true);
     const [recipes, setRecipes] = useState([]);
     console.log(recipes)
     useEffect(async () => {
@@ -35,26 +37,81 @@ export default function CustomizedSnackbars() {
         }
         , []
     )
-    const handleClick = () => {
-        setOpen(true);
-    };
 
-    const handleClose = (event, reason) => {
-        if (reason === 'clickaway') {
-            return;
-        }
 
-        setOpen(false);
-    };
 
     return (
+        <section style={{
+            marginLeft:200,
+            marginTop:40
+        }}>
+
+
         <div className={classes.root}>
+            <Collapse in={open}>
+                <Alert
+                    action={
+                    <IconButton
+                        onClick={() => {
+                            setOpen(false)
+                        }}
+                    >
+                        <CloseIcon style={{
+                            color:"#ffffff"
+                        }}
+                        >
 
-                <Alert onClose={handleClose}  severity="info">Masz juz {recipes.length} przepisy, niezle !</Alert>
-                <Alert onClose={handleClose} severity="warning">Pamietaj, aby dodac plan !</Alert>
+                        </CloseIcon>
 
-                <Alert onClose={handleClose} severity="success">Swietnie, ze jestes! Udanego planowania i smacznego! :)</Alert>
+                    </IconButton>
+                } severity="info">Masz juz {recipes.length} przepisy, niezle !</Alert>
+            </Collapse>
+            <Collapse in={open}>
 
+                <Alert
+                    action={
+                        <IconButton
+                            onClick={() => {
+                                setOpen(false)
+                            }
+                            }
+
+                        >
+                            <CloseIcon style={{
+                                color:"#ffffff"
+                            }}
+                            >
+
+                            </CloseIcon>
+
+                        </IconButton>
+
+                    }
+
+                    severity="warning">Pamietaj, aby dodac plan !</Alert> </Collapse>
+            <Collapse in={open}>
+
+                <Alert
+                    action={
+                        <IconButton
+                            onClick={() => {
+                                setOpen(false)
+                            }
+                            }
+                        >
+                            <CloseIcon style={{
+                                color:"#ffffff"
+                            }}
+                            >
+
+                            </CloseIcon>
+                        </IconButton>
+                    }
+
+                    severity="success">Swietnie, ze jestes! Udanego planowania i smacznego!
+                    :)</Alert>
+            </Collapse>
         </div>
+        </section>
     );
 }
