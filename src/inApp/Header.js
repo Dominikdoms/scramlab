@@ -8,6 +8,10 @@ import {
 } from 'react-router-dom';
 import Why from "./Why";
 import {MainView} from "../components/main-view";
+import Popup from "reactjs-popup";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faPlusSquare} from "@fortawesome/free-solid-svg-icons";
+import AddingPlan from "../components/addingPlan";
 
 
 const Header = () => {
@@ -32,6 +36,18 @@ const Header = () => {
                         ZAPLANUJ POSIŁKI!
                     </span>
                         </Link>
+{/*                    <Popup style={{position: "absolute",*/}
+{/*top: 0, left: 0*/}
+{/*                    }} className={"popup-content-header"} position={"center center"}*/}
+{/*                           trigger={*/}
+{/*                               <button className={"plan__list-add-btn"}>*/}
+{/*                                   <span className={"header__menu__element"}>*/}
+{/*                                       ZAPLANUJ POSIŁKI!*/}
+{/*                                   </span>*/}
+{/*                                   </button>*/}
+{/*                           }>*/}
+{/*                        <MainView/>*/}
+{/*                    </Popup>*/}
                     <span className={"header__menu__element"}>
                         DLACZEGO WARTO?
                     </span>

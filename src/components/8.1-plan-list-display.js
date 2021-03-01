@@ -149,7 +149,7 @@ export const PlanListDisplay = () => {
                            <button className={"plan__list-add-btn"}>
                                <FontAwesomeIcon className={"faPlusSquare"}
                                                 icon={faPlusSquare}/></button>
-                       } position="">
+                       } position="absolute">
                     <AddingPlan/>
                 </Popup>
             </div>
